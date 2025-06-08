@@ -1,38 +1,41 @@
 <template>
   <div id="app">
-    <h1>Vue 2 CKEditor Example</h1>
-    <Editor v-model="content" />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Editor from './components/Editor.vue';
-
 export default {
-  name: 'App',
-  components: {
-    Editor
-  },
-  data() {
-    return {
-      content: '<h2>Welcome to CKEditor 5!</h2><p>Start editing this content...</p>'
-    };
-  }
+  name: 'App'
 };
 </script>
 
 <style>
 #app {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin: 20px;
+  margin-top: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #34495e;
-  margin-bottom: 30px;
+/* Global styles */
+a {
+  color: #42b983;
+  text-decoration: none;
+}
+
+button, .btn {
+  cursor: pointer;
+  padding: 8px 16px;
+  background: #42b983;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+  background: #3aa876;
 }
 </style>
